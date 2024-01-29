@@ -5,14 +5,14 @@ export const sendEmail = async (to, subject, html) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'cdanielrap@gmail.com',
-        pass: 'pbge isbj wgfo dyjn'
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD
       }
     });
   
     // Detalles del correo
     const mailOptions = {
-      from: 'cdanielrap@gmail.com',
+      from: process.env.EMAIL,
       to: to,
       subject: subject,
       html: html,

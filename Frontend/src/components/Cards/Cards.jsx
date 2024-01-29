@@ -1,13 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "../Card/Card";
-
 const Cards = () => {
   const [products, setProducts] = useState();
 
   useEffect(() => {
+   
     axios
-      .get("http://localhost:8000/products")
+      .get(`http://localhost:8000/products`)
       .then(({ data }) => {
         setProducts(data?.productos);
       })

@@ -27,7 +27,9 @@ dotenv.config({path: './.env'})
 // Rutas
 app.use(indexRouter)
 
+const port = process.env.PORT || 8000;
+
 // Iniciar servidor
-app.listen(8000, () => {
-    console.log('Server up running port 8000');
+app.listen(port, () => {
+    console.log(`Server up running port ${port}`);
 });
