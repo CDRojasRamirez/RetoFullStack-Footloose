@@ -1,0 +1,3 @@
+export const addProductQuery  = 'INSERT INTO producto(`NombreProducto`, `idMarca`, `idModelo`, `idColor`, `idTalla`, `user_id`, `imagen`, `PrecioVenta`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
+export const getProductsQuery = 'SELECT * FROM Producto';
+export const updateProductQuery = 'UPDATE Producto SET NombreProducto = ?, idMarca = ?, idModelo = ?, idColor = ?, idTalla = ?, imagen = ?, PrecioVenta = ? WHERE idProducto = ?';
